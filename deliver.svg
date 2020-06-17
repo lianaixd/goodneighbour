@@ -1,0 +1,17 @@
+<svg id="deliver" xmlns="http://www.w3.org/2000/svg" width="293.799" height="73" viewBox="0 0 293.799 73">
+  <g id="Component_4_8" data-name="Component 4 – 8" transform="translate(-0.001 0.002)">
+    <g id="Component_3_1" data-name="Component 3 – 1" transform="translate(0.001 -0.002)">
+      <path id="Subtraction_3" data-name="Subtraction 3" d="M31.721,69H10A10.011,10.011,0,0,1,0,59V10A10.011,10.011,0,0,1,10,0H31.721a10.011,10.011,0,0,1,10,10V59A10.011,10.011,0,0,1,31.721,69ZM11.612,44.473v5.391H29.975V44.473Zm23.629-5.66a2.021,2.021,0,1,0,2.025,2.021A2.026,2.026,0,0,0,35.24,38.813ZM30.614,16.889h0L24.05,23.45h9.467a12.6,12.6,0,0,0-2.9-6.56Zm-19.5.153A12.613,12.613,0,0,0,8.339,23.45h9.185l-6.411-6.407Zm8.464-4.573a12.642,12.642,0,0,0-6.535,2.677l6.535,6.53Zm2.7,0v8.949l6.39-6.386A12.656,12.656,0,0,0,22.278,12.47Z" transform="translate(0 0)" fill="#77bfe2"/>
+    </g>
+    <g id="ic_mail_outline_24px" transform="translate(41.582 40.84) rotate(-22)">
+      <path id="ic_mail_outline_24px-2" data-name="ic_mail_outline_24px" d="M15.543,0H1.727A1.725,1.725,0,0,0,.009,1.727L0,12.089a1.732,1.732,0,0,0,1.727,1.727H15.543a1.732,1.732,0,0,0,1.727-1.727V1.727A1.732,1.732,0,0,0,15.543,0Zm0,12.089H1.727V3.454L8.635,7.772l6.908-4.318ZM8.635,6.045,1.727,1.727H15.543Z" transform="translate(0 0)" fill="#77bfe2"/>
+    </g>
+  </g>
+  <g id="Group_8" data-name="Group 8" transform="translate(-1290.201 -232)">
+    <text id="deliver_to_your_neighbours" data-name="deliver to your
+neighbours" transform="translate(1383 256)" fill="#36a1d4" font-size="30" font-family="Bahnschrift"><tspan x="0" y="0">Deliver To Your</tspan><tspan x="0" y="42">Neighbours</tspan></text>
+    <g id="ic_error_24px" transform="translate(1557 283.267)">
+      <path id="ic_error_24px-2" data-name="ic_error_24px" d="M7.5,0A7.5,7.5,0,1,0,15,7.5,7.5,7.5,0,0,0,7.5,0Zm.75,11.25H6.75V9.75h1.5Zm0-3H6.75V3.75h1.5Z" transform="translate(15 15) rotate(180)" fill="#36a1d4"/>
+    </g>
+  </g>
+</svg>

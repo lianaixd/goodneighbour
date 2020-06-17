@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Good Neighbour</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!--  <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script type="text/javascript" src="jspdf.min.js"></script>-->
+    <script type="text/javascript" src="./marcScript.js"></script>
+    <style>
+        .print-hidden {
+            display: none;
+        }
+       /* .bg {
+            !* The image used *!
+            background-image: url("./gnPDF.jpg");
+
+            !* Full height *!
+            !*height: 100%;*!
+            width: 500px;
+            height: 500px;
+            !* Center and scale the image nicely *!
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }*/
+        .float-image {
+            float: right;
+        }
+        @media print
+        {
+            @page { margin: 0; }
+            body { margin: 1.6cm; }
+            .no-print, .no-print *
+            {
+                display: none !important;
+            }
+            .print, .print *
+            {
+                display: block !important;
+            }
+            .map
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header>
+    <div class="logo no-print"><a href="practice.html"> <img id="logo"
+                                                    src="logo.svg"
+                                                    alt="Good Neighbour logo"
+    ></a>
+    </div>
+</header>
+<main>
+    <div class="info no-print">
+        <img id="fill"
+             src="fill.svg"
+             alt="Fill out this form" title="Your choice will auto-populate the print out"
+        >
+        <img id="print"
+             src="print.svg"
+             alt="Print at home" title="Print as many copies as you like"
+        >
+        <img id="deliver"
+             src="deliver.svg"
+             alt="Deliver to your neighbours" title="Don't forget to wash your hands before and after delivering"
+        >
+    </div>
+    <div class="page">
+        <section>
+            <div id="map-background">
+                <div class="print-hidden print">
+                    <img class="float-image" src="gnPDF.jpg" width="100%" height="100%" />
+                </div>
+                <div id="mask">
+                    <div id="map"></div>
+                    <div id="content"></div>
+                </div>
+            </div>
+        </section>
+        <section class="no-print">
+            <form>
+                <label>Offer to run errands for neighbours who are cocooning.</label>
+                <input type="checkbox" name="check1" id="#check1" onclick="dynInput(this);"/>
+                <p id="insertinputs"></p>
+                <input type="button" class="pdf" id="button" value="Print PDF"/>
+            </form>
+        </section >
+        <section  class="no-print">
+            <div id="right-panel">
+                <h2>Results</h2>
+                <ul id="places"></ul>
+                <button id="more">More results</button>
+            </div>
+        </section>
+    </div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Google Maps Multiple Markers</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn71n84byz5b_tQgirLxTE37SRzCm9v88&callback=InitMap">
+    </script>
+    <script type="text/javascript" src="html2canvas.js"></script>
+</head>
+<body>
+    <div id="map" style="width: 640px; height: 480px;"></div>
+    <input type="button" value="Take Screenshot Of Div" onclick="Screenshot();" />
+    <div id="img-out" width="640px" height="480px"></div>
+    
+    <script type="text/javascript">
+        var map;
+        function InitMap(){
+        var locations = [
+          ['Bondi Beach', -33.890542, 151.274856, 4],
+          ['Cronulla Beach', -34.028249, 151.157507, 3],
+          ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+          ['Maroubra Beach', -33.950198, 151.259302, 1]
+        ];
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+       disableDefaultUI: true,
+          center: new google.maps.LatLng(-33.92, 151.25),
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+        });
+
+        var marker, i;
+        for (i = 0; i < locations.length; i++) {
+          marker = new google.maps.Marker({
+      title: locations[i][0],
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+          });
+        }
+     }
+
+     function Screenshot(){
+      //Inspect the element and find .gm-style>div:first>div:first>div:last>div -> May vary from versions
+      var transform=$(".gm-style>div:first>div:first>div:last>div").css("transform");
+      console.log(transform);
+      var comp=transform.split(",") //split up the transform matrix
+      var mapleft=parseFloat(comp[4]) //get left value
+      var maptop=parseFloat(comp[5])  //get top value
+      $(".gm-style>div:first>div:first>div:last>div").css({ 
+      "transform":"none",
+      "left":mapleft,
+      "top":maptop,
+      });
+      html2canvas(document.getElementById('map'),
+      {
+      useCORS: true
+      }).
+      then(function(canvas)
+      {
+       $("#img-out").append(canvas);
+       $(".gm-style>div:first>div:first>div:last>div").css({
+       left:0,
+       top:0,
+       "transform":transform
+       })
+      }
+      );
+     }
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg id="print" xmlns="http://www.w3.org/2000/svg" width="254.462" height="72" viewBox="0 0 254.462 72">
+  <g id="ic_local_printshop_24px" transform="translate(154 -0.793)">
+    <path id="ic_local_printshop_24px-2" data-name="ic_local_printshop_24px" d="M68.59,22.109H13.751A11.6,11.6,0,0,0,2,33.575V56.506H17.668V71.793h47V56.506H80.341V33.575A11.6,11.6,0,0,0,68.59,22.109ZM56.839,64.149H25.5V45.04H56.839ZM68.59,37.4a3.823,3.823,0,1,1,3.917-3.822A3.882,3.882,0,0,1,68.59,37.4ZM64.673,3h-47V18.287h47Z" transform="translate(-156 -2)" fill="#77bfe2"/>
+  </g>
+  <text id="print_at_home" data-name="print
+at home" transform="translate(108.462 24)" fill="#36a1d4" font-size="30" font-family="Bahnschrift"><tspan x="0" y="0">Print</tspan><tspan x="0" y="42">At Home</tspan></text>
+  <path id="ic_error_24px" d="M9.5,2A7.5,7.5,0,1,0,17,9.5,7.5,7.5,0,0,0,9.5,2Zm.75,11.25H8.75v-1.5h1.5Zm0-3H8.75V5.75h1.5Z" transform="translate(256.462 68) rotate(180)" fill="#36a1d4"/>
+</svg>

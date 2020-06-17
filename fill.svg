@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="293.826" height="72" viewBox="0 0 293.826 72">
+  <g id="fill" transform="translate(0.5)">
+    <g id="Group_12" data-name="Group 12" transform="translate(-202 -115.177)">
+      <g id="Component_2_8" data-name="Component 2 – 8" transform="translate(202 115.932)">
+        <path id="Path_81" data-name="Path 81" d="M46.044,21.409,34.577,9.943,4,40.52V51.987H15.467Zm9.051-9.051a3.045,3.045,0,0,0,0-4.311L47.94.892a3.045,3.045,0,0,0-4.311,0L37.635,6.885,49.1,18.352Z" transform="translate(43.34 0.002)" fill="#77bfe2"/>
+        <path id="Path_82" data-name="Path 82" d="M0,20H99.283v3.994H0Z" transform="translate(0 44.895)" fill="#77bfe2" stroke="#cce5f6" stroke-width="1"/>
+      </g>
+    </g>
+    <text id="Fill_out_this_form" data-name="Fill out
+this form" transform="translate(129.326 24)" fill="#36a1d4" font-size="30" font-family="Bahnschrift"><tspan x="0" y="0">Fill Out</tspan><tspan x="0" y="42">This Form</tspan></text>
+    <g id="ic_error_24px" transform="translate(278.326 51.48)">
+      <path id="ic_error_24px-2" data-name="ic_error_24px" d="M7.5,0A7.5,7.5,0,1,0,15,7.5,7.5,7.5,0,0,0,7.5,0Zm.75,11.25H6.75V9.75h1.5Zm0-3H6.75V3.75h1.5Z" transform="translate(15 15) rotate(180)" fill="#36a1d4"/>
+    </g>
+  </g>
+</svg>

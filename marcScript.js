@@ -155,7 +155,7 @@ function initMap() {
     console.debug("initMap");
     Popup = createPopupClass();
     const centerCoords = {lat: 53.3498123, lng: -6.2624435};
-
+console.debug("testapikey", process.env.GOOGLE_MAPS_API_KEY);
     var styledMapType = new google.maps.StyledMapType(
         [
             {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},

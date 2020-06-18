@@ -161,8 +161,8 @@ function initMap() {
     var styledMapType = new google.maps.StyledMapType(
         [
             {elementType: 'geometry', stylers: [{visibility: "simplified"}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#f84243'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#f#f84243'}]},
             {
                 featureType: 'administrative',
                 elementType: 'labels.text',
@@ -170,7 +170,7 @@ function initMap() {
             },
             {
                 weight: "0.25"
-            }
+            },
             {
                 featureType: 'administrative',
                 elementType: 'labels.text.fill',

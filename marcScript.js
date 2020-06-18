@@ -319,7 +319,7 @@ function initMap() {
             };
             getPlaces(pos);
             map.setCenter(pos);
-            map.setZoom(14);
+            map.setZoom(14.5);
             const latMult = 0.019;
             const lngMult = 0.041;
             let imageBounds = {
@@ -350,6 +350,7 @@ function initMap() {
         service.nearbySearch(
             {location: pos, radius: 1000, //type: ['park']},
                 keyword: ['park']},
+                rankby: distance,
             function(results, status, pagination) {
                 if (status !== 'OK') {
                     console.debug("getPlaces, nearbySearch, status not OK, status: ", status);

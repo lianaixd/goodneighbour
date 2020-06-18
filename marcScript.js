@@ -5,7 +5,7 @@ document.head.appendChild(jqueryScript);
 */
 
 let script = document.createElement('script');
-// 
+//
 // AIzaSyCn71n84byz5b_tQgirLxTE37SRzCm9v88
 script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYKkfx6SkANiwdCiUbJdbMg-EUaJ1ktoU&libraries=places&callback=initMap"
 script.defer = true;
@@ -273,7 +273,7 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: centerCoords,
-        //zoom: 13.8,
+        zoom: 13.8,
         styles: styleData,
         disableDefaultUI: true,
         gestureHandling: 'none',
@@ -317,6 +317,7 @@ function initMap() {
             infoWindow.setContent('My Home.');
             infoWindow.open(map);*/
             map.setCenter(pos);
+            map.setZoom(13.8);
             const latMult = 0.019;
             const lngMult = 0.041;
             let imageBounds = {

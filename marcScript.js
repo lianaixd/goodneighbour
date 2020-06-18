@@ -150,6 +150,8 @@ const styleData = [
 let map;
 let Popup;
 let historicalOverlay;
+let usersName;
+let usersPhone;
 
 function initMap() {
     // Create the map.
@@ -281,31 +283,6 @@ function initMap() {
     });
     map.mapTypes.set('styled_map', styledMapType);
     map.setMapTypeId('styled_map');
-
-/*
-    // Define the LatLng coordinates for the polygon.
-    var shapeCoords = [
-        {lat: centerCoords.lat, lng: centerCoords.lng},
-        {lat: centerCoords.lat, lng: centerCoords.lng +100},
-        {lat: centerCoords.lat + 100, lng: centerCoords.lng +100},
-        {lat: centerCoords.lat + 100, lng: centerCoords.lng},
-    ];
-
-    // Construct the polygon.
-    var shape = new google.maps.Polygon({
-        paths: shapeCoords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 3,
-        fillColor: '#FF0000',
-        fillOpacity: 0.35
-    });
-    shape.setMap(map);
-
-*/
-
-
-    // infoWindow = new google.maps.InfoWindow;
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             let pos = {
@@ -313,9 +290,6 @@ function initMap() {
                 lng: position.coords.longitude
             };
             getPlaces(pos);
-            /*infoWindow.setPosition(pos);
-            infoWindow.setContent('My Home.');
-            infoWindow.open(map);*/
             map.setCenter(pos);
             map.setZoom(13.8);
             const latMult = 0.019;
@@ -336,7 +310,6 @@ function initMap() {
             handleLocationError(true, infoWindow, map.getCenter());
         });
     }
-
     function getPlaces(pos){
         let service = new google.maps.places.PlacesService(map);
         console.debug("getPlaces");
@@ -375,36 +348,16 @@ function initMap() {
                 anchor: new google.maps.Point(17, 34),
                 scaledSize: new google.maps.Size(50, 50)
             };
-            /*new google.maps.InfoWindow({
-                map: map,
-                content: place.name,
-                // icon: image,
-                title: place.name,
-                position: place.geometry.location,
-                disableAutoPan:true,
-            })
-            */
-            // var marker = new google.maps.Marker({
-            //     position: place.geometry.location,
-            //     map: map,
-            //     title: place.name,
-            // });
             let popupDiv = document.createElement('div');
             const contentDiv = document.getElementById('content');
             contentDiv.appendChild(popupDiv);
-            // console.debug("contentDiv: ", contentDiv);
-            // if (i === 0) {
                 let popup = new Popup(
                     place.geometry.location,
                     popupDiv,
                     place.name);
                 popup.setMap(map);
-           //  }
-
-
             let li = document.createElement('li');
             li.textContent = place.name;
-            // console.debug("createMarkers, appending li: ", li);
             placesElement.appendChild(li);
         }
     }
@@ -428,6 +381,11 @@ function dynInput(cbox) {
         nameDiv.appendChild(nameInput);
         document.getElementById("insertinputs").appendChild(nameDiv);
 
+        $(nameInput).change(function () {
+            usersName = $(nameInput).val();
+            console.debug("usersName: ", usersName);
+        })
+
         let phoneInput = document.createElement("input");
         phoneInput.type = "text";
         phoneInput.placeholder = "Phone";
@@ -436,6 +394,10 @@ function dynInput(cbox) {
         phoneDiv.id = cbox.phone;
 
         phoneDiv.appendChild(phoneInput);
+        $(phoneInput).change(function () {
+            usersPhone = $(phoneInput).val();
+            console.debug("usersPhone: ", usersPhone);
+        })
         document.getElementById("insertinputs").appendChild(phoneDiv);
     } else {
         document.getElementById(cbox.name).remove();
@@ -447,6 +409,24 @@ $(document).ready(function () {
     console.debug("document ready");
     $('#button').click(function () {
         console.debug("button onClick");
+        /*const nameDiv = $('#nameDiv');
+        const phoneDiv = $('#phoneDiv');
+        console.debug("$('#nameDiv') ", nameDiv);
+        console.debug("$('#nameDiv') ", nameDiv.innerText);
+        console.debug("$('#nameDiv') ", nameDiv.innerHTML);
+        console.debug("$('#phoneDiv') ", phoneDiv);
+        console.debug("$('#phoneDiv') ", phoneDiv.innerText);
+        console.debug("$('#phoneDiv') ", phoneDiv.innerHTML);*/
+        let phoneDiv = document.createElement("div");
+        phoneDiv.innerHTML = "<p>" + usersPhone + "</p>";
+        phoneDiv.className = "print-hidden print";
+        let nameDiv = document.createElement("div");
+        nameDiv.innerHTML = "<p>" + usersName + "</p>";
+        nameDiv.className = "print-hidden print";
+        $('#name-and-phone-div').append(nameDiv);
+        $('#name-and-phone-div').append(phoneDiv);
+        // $('#name-div').innerText = "<p>" + usersName + "</p>";
+        /*$('#phoneDiv').innerText = "<p>" + usersPhone + "</p>";*/
         window.print();
     })
 });

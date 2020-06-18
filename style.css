@@ -112,13 +112,6 @@ html, body {
     width: 500px;
     margin:3px;
 }
-
-#red-square {
-    height: 100px;
-    width:100px;
-    background:red;
-}
-
 #map-background {
     /*background-color: #77bfe2;*/
     background-color: white;
@@ -127,6 +120,19 @@ html, body {
     height: 506px;
     width: 506px;
 }
+.users-info-position {
+    position: absolute;
+    z-index: 1000;
+    bottom: 0;
+}
+
+#red-square {
+    height: 100px;
+    width:100px;
+    background:red;
+}
+
+
 
 section {
     margin:30px;
@@ -153,6 +159,7 @@ form {
     border:none;
     cursor: pointer;
 }
+
 
 .pdf:hover{
      box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 12px 16px 0 rgba(0,0,0,0.19);

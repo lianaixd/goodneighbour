@@ -172,11 +172,11 @@ function initMap() {
                 }]
             },
             
-            {
-                featureType: 'administrative',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#f84243'}]
-            },
+            // {
+            //     featureType: 'administrative',
+            //     elementType: 'labels.text.fill',
+            //     stylers: [{color: '#f84243'}]
+            // },
             {
                 featureType: "administrative.neighborhood",
                 elementType: "labels.text",

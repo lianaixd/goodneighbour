@@ -180,21 +180,21 @@ function initMap() {
             //     elementType: 'labels.text.fill',
             //     stylers: [{color: '#f84243'}]
             // },
-            {
-                featureType: "administrative.neighborhood",
-                elementType: "labels.text",
-                stylers: [
-                    {
-                        color: '#f84243'
-                    }
-                    , 
-                    {
-                        weight: 0.25
-                    },
-                    {
-                        lightness: 45
-                    }]
-            },
+            // {
+            //     featureType: "administrative.neighborhood",
+            //     elementType: "labels.text",
+            //     stylers: [
+            //         {
+            //             color: '#f84243'
+            //         }
+            //         , 
+            //         {
+            //             weight: 0.25
+            //         },
+            //         {
+            //             lightness: 45
+            //         }]
+            // },
             {
                 featureType: "administrative.land_parcel",
                 elementType: "all",

@@ -184,7 +184,10 @@ function initMap() {
                     {
                         hue: "#ff0000"
                     }
-                ]
+                    , 
+                    {
+                        "weight": "0.25"
+                    }]
             },
             {
                 featureType: "administrative.land_parcel",

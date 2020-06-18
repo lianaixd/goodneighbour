@@ -461,7 +461,7 @@ function createPopupClass() {
      */
     console.debug("createPopupClass");
     function Popup(position, content, text) {
-        console.debug("creating popup. Content: ", content);
+        // console.debug("creating popup. Content: ", content);
         this.position = position;
         content.classList.add('popup-bubble');
         content.textContent = text;

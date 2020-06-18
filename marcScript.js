@@ -162,7 +162,7 @@ function initMap() {
         [
             {elementType: 'geometry', stylers: [{visibility: "simplified"}]},
             {elementType: 'labels.text.fill', stylers: [{color: '#f84243'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#f#f84243'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#f84243'}]},
             {
                 featureType: 'administrative',
                 elementType: 'labels.text',
@@ -220,7 +220,7 @@ function initMap() {
                         visibility: "on"
                     },
                     {
-                        color: "#6bb3a5"
+                        color: "#7cbc9f"
                     }
                 ]
             },
@@ -277,7 +277,7 @@ function initMap() {
                 elementType: "all",
                 stylers: [
                     {
-                        color: "#3986b8"
+                        color: "#36A1D4"
                     },
                     {
                         visibility: "on"

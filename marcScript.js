@@ -160,9 +160,9 @@ function initMap() {
     const centerCoords = {lat: 53.3498123, lng: -6.2624435};
     var styledMapType = new google.maps.StyledMapType(
         [
-            {elementType: 'geometry', stylers: [{visibility: "simplified"}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#f84243'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#f84243'}]},
+            // {elementType: 'geometry', stylers: [{visibility: "simplified"}]},
+            // {elementType: 'labels.text.fill', stylers: [{color: '#f84243'}]},
+            // {elementType: 'labels.text.stroke', stylers: [{color: '#f84243'}]},
             {
                 featureType: 'administrative',
                 elementType: 'labels.text',

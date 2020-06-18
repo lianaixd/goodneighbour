@@ -185,7 +185,7 @@ function initMap() {
                 elementType: "labels.text",
                 stylers: [
                     {
-                        hue: "#ff0000"
+                        color: '#f84243'
                     }
                     , 
                     {

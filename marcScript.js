@@ -186,10 +186,10 @@ function initMap() {
                     }
                     , 
                     {
-                        "weight": "0.2"
+                        weight: "0.25"
                     },
                     {
-                        saturation: -100
+                        saturation: -60
                     }]
             },
             {

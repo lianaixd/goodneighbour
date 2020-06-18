@@ -273,7 +273,7 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: centerCoords,
-        zoom: 13.8,
+        //zoom: 13.8,
         styles: styleData,
         disableDefaultUI: true,
         gestureHandling: 'none',

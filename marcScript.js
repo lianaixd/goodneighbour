@@ -5,7 +5,9 @@ document.head.appendChild(jqueryScript);
 */
 
 let script = document.createElement('script');
-script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCn71n84byz5b_tQgirLxTE37SRzCm9v88&libraries=places&callback=initMap"
+// 
+// AIzaSyCn71n84byz5b_tQgirLxTE37SRzCm9v88
+script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYKkfx6SkANiwdCiUbJdbMg-EUaJ1ktoU&libraries=places&callback=initMap"
 script.defer = true;
 script.async = true;
 window.initMap = initMap;
@@ -155,7 +157,6 @@ function initMap() {
     console.debug("initMap");
     Popup = createPopupClass();
     const centerCoords = {lat: 53.3498123, lng: -6.2624435};
-
     var styledMapType = new google.maps.StyledMapType(
         [
             {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},

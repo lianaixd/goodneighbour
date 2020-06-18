@@ -319,7 +319,7 @@ function initMap() {
             };
             getPlaces(pos);
             map.setCenter(pos);
-            map.setZoom(13.8);
+            map.setZoom(14);
             const latMult = 0.019;
             const lngMult = 0.041;
             let imageBounds = {

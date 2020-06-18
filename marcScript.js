@@ -169,9 +169,6 @@ function initMap() {
                 stylers: [{color: '#f84243'}]
             },
             {
-                weight: "0.25"
-            },
-            {
                 featureType: 'administrative',
                 elementType: 'labels.text.fill',
                 stylers: [{color: '#f84243'}]

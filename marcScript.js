@@ -168,7 +168,10 @@ function initMap() {
                 elementType: 'labels.text',
                 stylers: [{color: '#f84243'}, 
                 {
-                    weight: "0.25"
+                    weight: 0.25
+                },
+                {
+                    lightness: 45
                 }]
             },
             
@@ -189,7 +192,7 @@ function initMap() {
                         weight: 0.25
                     },
                     {
-                        saturation: -60
+                        lightness: 45
                     }]
             },
             {

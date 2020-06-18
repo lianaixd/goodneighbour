@@ -171,7 +171,7 @@ function initMap() {
                     weight: 0.25
                 },
                 {
-                    lightness: 45
+                    lightness: 20
                 }]
             },
             

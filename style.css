@@ -23,8 +23,10 @@ html, body {
     left: 0;
     transform: translate(-50%, -100%);
     /* Style the bubble. */
-    background-color: white;
-    padding: 5px;
+    color: white;
+    background-color:  #36A1D4;
+    ;
+    padding: 7px;
     border-radius: 5px;
     font-family: sans-serif;
     overflow-y: auto;
@@ -38,6 +40,7 @@ html, body {
     width: 100%;
     bottom: /* TIP_HEIGHT= */ 8px;
     left: 0;
+    background-color: #36A1D4;
 }
 /* This element draws the tip. */
 .popup-bubble-anchor::after {
@@ -53,7 +56,7 @@ html, body {
     /* The tip is 8px high, and 12px wide. */
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: /* TIP_HEIGHT= */ 8px solid white;
+    border-top: /* TIP_HEIGHT= */ 8px solid #36A1D4;
 }
 /* JavaScript will position this div at the bottom of the popup tip. */
 .popup-container {
@@ -84,7 +87,12 @@ html, body {
 }
 
 .page {
-   display:inline-flex;
+   display:flex;
+   /* flex-wrap:wrap; */
+   flex-direction:row;
+   justify-content:space-between;
+   padding-top:2em;
+   padding-left:2em;
 
 }
 
@@ -108,9 +116,10 @@ html, body {
     overflow: hidden;
     /*border-radius: 250px;*/
     position: absolute;
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 650px;
     margin:3px;
+    
 }
 #map-background {
     /*background-color: #77bfe2;*/
@@ -119,6 +128,7 @@ html, body {
     /*border-radius: 253px;*/
     height: 506px;
     width: 506px;
+    margin-right:8em;
 }
 .users-info-position {
     position: absolute;
@@ -126,24 +136,31 @@ html, body {
     bottom: 0;
 }
 
-#red-square {
+/* #red-square {
     height: 100px;
     width:100px;
     background:red;
-}
+} */
 
 
 
 section {
     margin:30px;
-    justify-content: space-around;
-    padding-left:30px;
+    
 }
 
+
 form {
+    height:700px;
     font-family: bahnschrift;
     color:#36A1D4;
     font-size: 16pt;
+    text-align:right;
+    margin-left:1em;
+    margin-right:2em;
+    margin-top:2em;
+    flex:1 1 80px;
+    min-width:50px;
 }
 
 .pdf {
@@ -158,6 +175,7 @@ form {
     border-radius: 5px;
     border:none;
     cursor: pointer;
+    
 }
 
 

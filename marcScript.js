@@ -303,7 +303,7 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: centerCoords,
-        zoom: 13.8,
+        zoom: 14,
         styles: styleData,
         disableDefaultUI: true,
         gestureHandling: 'none',
@@ -319,13 +319,13 @@ function initMap() {
             };
             getPlaces(pos);
             map.setCenter(pos);
-            map.setZoom(13.8);
-            const latMult = 0.019;
-            const lngMult = 0.041;
+            map.setZoom(14);
+            const latMult = 0.020;
+            const lngMult = 0.044;
             let imageBounds = {
                 north: pos.lat+latMult,
                 south: pos.lat-latMult,
-                east: pos.lng+lngMult-0.001,
+                east: pos.lng+lngMult+0.001,
                 west: pos.lng-lngMult-0.001,
             };
 
@@ -347,21 +347,30 @@ function initMap() {
             moreButton.disabled = true;
             if (getNextPage) getNextPage();
         };
+
         service.nearbySearch(
-            {location: pos, radius: 1000, //type: ['park']},
-                keyword: ['park']},
+            {location: pos, 
+                radius: 1000, 
+                keyword: ['landmark']},
             function(results, status, pagination) {
                 if (status !== 'OK') {
                     console.debug("getPlaces, nearbySearch, status not OK, status: ", status);
                     return;
                 }
-                // console.debug("getPlaces, nearbySearch, status OK, results: ", results);
                 createMarkers(results);
-                moreButton.disabled = !pagination.hasNextPage;
-                getNextPage = pagination.hasNextPage && function() {
-                    pagination.nextPage();
-                };
             });
+
+            service.nearbySearch(
+                {location: pos, 
+                    radius: 1000, 
+                    keyword: ['park']},
+                function(results, status, pagination) {
+                    if (status !== 'OK') {
+                        console.debug("getPlaces, nearbySearch, status not OK, status: ", status);
+                        return;
+                    }
+                    createMarkers(results);
+                });
     }
     function createMarkers(places) {
         // let bounds = new google.maps.LatLngBounds();

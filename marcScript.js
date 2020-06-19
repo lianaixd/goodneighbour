@@ -309,6 +309,32 @@ function initMap() {
         gestureHandling: 'none',
         zoomControl: false
     });
+//infowindow//
+    infoWindow = new google.maps.InfoWindow;
+    if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var pos = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    };
+//end infowindow//
+// getplaces(pos);
+
+
+
+infoWindow.setPosition(pos);
+infoWindow.setContent('My Home.');
+infoWindow.open(map);
+map.setCenter(pos);
+}, function() {
+handleLocationError(true, infoWindow, map.getCenter());
+});
+}
+
+
+
+//end
+
     map.mapTypes.set('styled_map', styledMapType);
     map.setMapTypeId('styled_map');
     if (navigator.geolocation) {
@@ -326,7 +352,7 @@ function initMap() {
                 north: pos.lat+latMult,
                 south: pos.lat-latMult,
                 east: pos.lng+lngMult+0.001,
-                west: pos.lng-lngMult-0.001,
+                west: pos.lng-lngMult+0.001,
             };
 
             historicalOverlay = new google.maps.GroundOverlay(

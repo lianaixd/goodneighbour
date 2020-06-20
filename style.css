@@ -10,6 +10,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: bahnschrift, sans-serif;
 }
 
 #right-panel {
@@ -57,12 +58,14 @@ html, body {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: /* TIP_HEIGHT= */ 8px solid #36A1D4;
+    
 }
 /* JavaScript will position this div at the bottom of the popup tip. */
 .popup-container {
     cursor: auto;
     height: 0;
     position: absolute;
+    background-color: #36A1D4;
     /* The max width of the info window. */
     width: 200px;
 }
@@ -126,23 +129,20 @@ html, body {
     background-color: white;
     position:relative;
     /*border-radius: 253px;*/
-    height: 506px;
-    width: 506px;
-    margin-right:8em;
+    height: 600px;
+    width: 650px;
+    /* margin-right:8em; */
 }
 .users-info-position {
     position: absolute;
     z-index: 1000;
-    bottom: 0;
+    bottom: 20px;
+    left:215px;
+    font-family: bahnschrift;
+    color:#36A1D4;
+    font-size: 11pt;
+    padding-top: 100px;
 }
-
-/* #red-square {
-    height: 100px;
-    width:100px;
-    background:red;
-} */
-
-
 
 section {
     margin:30px;
@@ -164,10 +164,12 @@ form {
 }
 
 .pdf {
+    position: static;
     background-color: #36A1D4;
     font-family: bahnschrift;
     font-size: 20pt;
     color: white;
+    margin-top:350px;
     padding-top: 10px;
     padding-bottom: 5px;
     padding-left: 15px;
@@ -183,3 +185,55 @@ form {
      box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 12px 16px 0 rgba(0,0,0,0.19);
 }
 
+
+.print-hidden{
+    position:relative;
+    width:100%;
+    height:100%;
+    margin:0;
+    left:-20px;
+}
+ /* .print{
+    position: inherit;
+    left:100px;
+} */
+
+#content{
+    width:800px;
+    height:600px;
+}
+
+input.check1{
+    position:absolute;
+    opacity:0.5;
+    width:30px;
+    height:30px;
+    color:#36A1D4;
+    border: 1px solid #36A1D4;
+    cursor:pointer;
+}
+input.check1 :checked ~ .checkmark{
+    background:#36A1D4;
+    color:#36A1D4;
+}
+#check2{
+    color:#36A1D4;
+    background-color:#36A1D4;
+}
+
+.checkmark{
+    position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #36A1D4; 
+  z-index:1000;
+}
+/* .checkbox{
+    color:#36A1D4;
+    background-color:#36A1D4;
+} */
+/* #cbox.name{
+    background-color: red;
+} */

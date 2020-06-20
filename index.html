@@ -11,56 +11,7 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script type="text/javascript" src="jspdf.min.js"></script>-->
     <script type="text/javascript" src="./marcScript.js"></script>
-    <style>
-        /*sdfjbef*/
-        /*whatever*/
-        .print-hidden {
-            display: none;
-        }
-       /* .bg {
-            !* The image used *!
-            background-image: url("./gnPDF.jpg");
-
-            !* Full height *!
-            !*height: 100%;*!
-            width: 500px;
-            height: 500px;
-            !* Center and scale the image nicely *!
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .float-image {
-        }
-        */
-        @media print
-        {
-            @page { margin: 0; }
-            body { margin: 1.6cm; }
-            .no-print, .no-print *
-            {
-                display: none !important;
-            }
-            .print, .print *
-            {
-                display: block !important;
-            }
-            #map-background {
-                width: 100% !important;
-                height: 100% !important;
-            }
-            #mask {
-                width: 506px !important;
-                height: 506px !important;
-                top: 25%;
-                left: 18%
-            }
-            section {
-                margin: 0 !important;
-                padding: 0 !important;
-            }
-        }
-    </style>
+    
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -93,7 +44,9 @@
                 <div class="print-hidden print">
                     <img class="float-image" src="gnPDF.jpg" width="100%" height="100%" />
                 </div>
-                <div class="users-info-position" id="name-and-phone-div">
+                <div class="users-info-position" id="name-div">
+                </div>
+                <div class="users-info-position" id="phone-div">
                 </div>
                 <div id="mask">
                     <div id="map"></div>

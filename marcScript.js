@@ -486,8 +486,8 @@ $(document).ready(function () {
         let nameDiv = document.createElement("div");
         nameDiv.innerHTML = "<p>" + usersName + "</p>";
         nameDiv.className = "print-hidden print";
-        $('#name-and-phone-div').append(nameDiv);
-        $('#name-and-phone-div').append(phoneDiv);
+        $('#name-div').append(nameDiv);
+        $('#phone-div').append(phoneDiv);
         // $('#name-div').innerText = "<p>" + usersName + "</p>";
         /*$('#phoneDiv').innerText = "<p>" + usersPhone + "</p>";*/
         window.print();

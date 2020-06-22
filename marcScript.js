@@ -299,6 +299,7 @@ function initMap() {
             }
         ],
         {name: 'Styled Map'});
+       
 
 
     map = new google.maps.Map(document.getElementById('map'), {

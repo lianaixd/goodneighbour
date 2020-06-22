@@ -146,7 +146,8 @@ section {
 
 
 form {
-    height:700px;
+    position:relative;
+    height:500px;
     font-family: bahnschrift;
     color:#36A1D4;
     font-size: 16pt;
@@ -159,11 +160,14 @@ form {
 }
 
 #name{
+    position:absolute;
     font-family: bahnschrift;
     color:#36A1D4;
     padding:7px !important;
     border:2px solid #36A1D4;
 margin:3px;
+right:0;
+top:25%;
 }
 
 #name:focus{
@@ -172,11 +176,14 @@ margin:3px;
 }
 
 #number{
+    position:absolute;
     font-family: bahnschrift;
     color:#36A1D4;
     padding:7px !important;
     border:2px solid #36A1D4;
     margin:3px;
+    right:0;
+top:35%;
 }
 
 #number:focus{
@@ -185,9 +192,9 @@ margin:3px;
 }
 
 .pdf {
-    position: absolute;
-    right: 5em;
-    bottom:4em;
+    position: relative;
+    right: 15%;
+    bottom:20%;
     background-color: #36A1D4;
     font-family: bahnschrift;
     font-size: 20pt;
@@ -237,6 +244,8 @@ input.check1{
     color:#36A1D4;
     border: 1px solid #36A1D4;
     cursor:pointer;
+    /* right:-20%;
+    top:13%; */
 }
 input.check1 :checked ~ .checkmark{
     background:#36A1D4;

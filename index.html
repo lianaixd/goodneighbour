@@ -25,18 +25,20 @@
 </header>
 <main>
     <div class="info no-print">
-        <img id="fill"
+        <a href="#" name="pulse-button" class="pulse-button">
+        <img class="fill" id="fill"
              src="fill.svg"
              alt="Fill out this form" title="Your choice will auto-populate the print out"
-        >
+        ></a>
+        <a href="#">
         <img id="print"
              src="print.svg"
              alt="Print at home" title="Print as many copies as you like"
-        >
+        ></a> <a href="#">
         <img id="deliver"
              src="deliver.svg"
              alt="Deliver to your neighbours" title="Don't forget to wash your hands before and after delivering"
-        >
+        ></a>
     </div>
     <div class="page">
         <section>
@@ -58,7 +60,7 @@
             <form>
                 <label>Offer to run errands for neighbours who are cocooning.</label>
                 <input type="checkbox" name="check1"  class="check1" onclick="dynInput(this);"/>
-                <span class="checkmark"></span>
+                
             </label>
                 <p id="insertinputs"></p>
                 <input type="button" class="pdf" id="button" value="Print PDF"/>

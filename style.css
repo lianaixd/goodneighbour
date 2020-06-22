@@ -105,11 +105,33 @@ html, body {
 }
 
 #fill{
+   
     width:185px;
+    
 
   /*  margin-left:160px;*/
 }
+/* start pulse test */
+a {
+    cursor: pointer; 
+    display:flex;
+}
 
+/* 
+  .clicked {
+    animation: boxShadowAnim 0.5s forwards;
+  }
+  
+  @keyframes boxShadowAnim {
+    from {
+      box-shadow: #ffe0b2 0px 0px 0px 0px;
+    }
+    to {
+      box-shadow: rgba(255, 224, 178, 0) 0px 0px 0px 20px;
+    }
+  } */
+
+/* end pulse test */
 #print{
     width:160px;
  /*   margin-left:158px;*/
@@ -174,6 +196,7 @@ form {
 margin:3px;
 right:0;
 top:25%;
+border-radius: 5px;
 }
 
 #name:focus{
@@ -190,6 +213,7 @@ top:25%;
     margin:3px;
     right:0;
 top:35%;
+border-radius: 5px;
 }
 
 #number:focus{
@@ -248,11 +272,14 @@ input.check1{
     width:30px;
     height:30px;
     color:#36A1D4;
-    outline: 3px solid rgba(54, 161, 212, 1);
+    outline: 4px solid rgba(54, 161, 212, 1);
     cursor:pointer;
     margin:20px;
     margin-top:10px;
     top:0;
+    /* box-shadow: 0 0 3pt 2pt #36A1D4; */
+    /* outline: 5px; */
+    /* animation: shadow-pulse 1s 2; */
 }
 input.check1 :checked ~ .checkmark{
     background:#36A1D4;
@@ -263,28 +290,28 @@ input.check2{
     background-color:#36A1D4;
 }
 
-/* .checkmark{
-    position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  outline: 3px #36A1D4; 
-  z-index:1000;
-} */
-/* .checkbox{
-    color:#36A1D4;
-    background-color:#36A1D4;
-} */
-/* #cbox.name{
-    background-color: red;
-} */
+.clicked {
+	animation: boxShadowAnim 0.5s forwards;
+}
+
+@keyframes boxShadowAnim {
+	from {
+		box-shadow: rgba(54, 161, 212, 1) 0px 0px 0px 0px;
+	}
+	to {
+		box-shadow: rgba(54, 161, 212, 0) 0px 0px 0px 20px;
+	}
+}
+
 
 
        
         .print-hidden {
             display: none;
         }
+
+     
+
       
  @media print
         {       

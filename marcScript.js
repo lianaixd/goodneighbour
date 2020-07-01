@@ -21,7 +21,6 @@ $(function(){
 
 
 
-
 let script = document.createElement('script');
 
 script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYKkfx6SkANiwdCiUbJdbMg-EUaJ1ktoU&libraries=places&callback=initMap"
@@ -458,8 +457,10 @@ function dynInput(cbox) {
         nameInput.type = "text";
         nameInput.placeholder = "Name";
         nameInput.id = "name";
+        // nameInput.onkeyup ="manage(this)";
         let nameDiv = document.createElement("div");
         nameDiv.id = cbox.name;
+        // nameDiv.onkeyup = "manage(this)";
         nameDiv.appendChild(nameInput);
         document.getElementById("insertinputs").appendChild(nameDiv);
 
@@ -486,6 +487,26 @@ function dynInput(cbox) {
         document.getElementById(cbox.phone).remove();
     }
 }
+
+//disable submit button
+(function() {
+    $('.boxes > input').keyup(function() {
+
+        var empty = false;
+        $('.boxes > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#button').attr('disabled', 'disabled');
+        } else {
+            $('#button').removeAttr('disabled');
+        }
+    });
+})()
+
 
 $(document).ready(function () {
     console.debug("document ready");

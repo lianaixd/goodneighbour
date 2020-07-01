@@ -10,7 +10,7 @@
   <!--  <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script type="text/javascript" src="jspdf.min.js"></script>-->
-    <script type="text/javascript" src="./marcScript.js"></script>
+    <script type="text/javascript" src="./marcScript.js"></script> 
     
     <link rel="stylesheet" href="style.css">
 
@@ -24,6 +24,7 @@
     </div>
 </header>
 <main>
+    <!--
     <div class="info no-print">
         <a href="#" name="pulse-button" class="pulse-button">
         <img class="fill" id="fill"
@@ -40,8 +41,9 @@
              alt="Deliver to your neighbours" title="Don't forget to wash your hands before and after delivering"
         ></a>
     </div>
+    -->
     <div class="page">
-        <section>
+        <section class="fixed">
             <div id="map-background">
                 <div class="print-hidden print">
                     <img class="float-image" src="gnPDF.jpg" width="100%" height="100%" />
@@ -56,16 +58,31 @@
                 </div>
             </div>
         </section>
-        <section class="no-print">
+        <section class="no-print" id="stretch">
             <form>
-                <label>Offer to run errands for neighbours who are cocooning.</label>
+            <p>Good Neighbour helps people connect with their neighbours in a low-risk and unobtrusive way.</p>
+            <p class="border">If you would like to offer assistance to people who are cocooning, include your</p>
+            <div class="boxes">
+            <input type="text" name="name" id="name" placeholder="Name" required />
+            <p>&</p>
+            <input type="tel" name="number" id="number" placeholder="Phone Number" required/>
+        </div>
+            <p>Then print and deliver this flyer to your neighbours.</p>
+
+            <input type="button" class="pdf" id="button" value="Print Flyer" disabled="disabled"/>
+            
+                <!-- <label>Offer to run errands for neighbours who are cocooning?</label>
                 <input type="checkbox" name="check1"  class="check1" onclick="dynInput(this);"/>
                 
             </label>
-                <p id="insertinputs"></p>
-                <input type="button" class="pdf" id="button" value="Print PDF"/>
+                <p id="insertinputs"></p> -->
+
+              
+
+              
             </form>
         </section >
+       
         <section  class="no-print">
             <div id="right-panel">
                 <h2>Results</h2>
@@ -73,6 +90,7 @@
                 <button id="more">More results</button>
             </div>
         </section>
+      
     </div>
 
 </main>

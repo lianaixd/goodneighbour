@@ -9,11 +9,12 @@
         <script type="text/javascript" src="./lianaScript.js"></script>
         <link rel="stylesheet" href="style.css">
         <!--<something-->
+            <link href="https://fonts.googleapis.com/css2?family=K2D&display=swap" rel="stylesheet">
     </head>
     <body>
         <header class="no-print">
             <div class="logo">
-                <img id="logo" src="logo.svg" alt="Good Neighbour logo"/>
+                <img id="logo" src="logo.png" alt="Good Neighbour logo"/>
             </div>
         </header>
             <div class="page print-image">
@@ -34,7 +35,14 @@
                             <p>&</p>
                             <input type="tel" name="number" id="number" placeholder="Phone Number" required/>
                         </div>
-                        <p>Then print and deliver this flyer to your neighbours.</p>
+                        <div class="outer">
+                            <div class="inner">
+                                <p>Then print and deliver <span class="thisflyer">this flyer</span> to your neighbours.
+                                    <img class="small" src="gnPDFsmall.jpg"/>
+                                     </p>
+                                     </div>
+                                     </div>
+
                         <input type="button" class="pdf" id="printButton" disabled="disabled" value="Print Flyer"/>
                     </form>
                 </section >

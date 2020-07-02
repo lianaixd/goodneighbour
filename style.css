@@ -245,6 +245,7 @@ border-radius: 5px;
     font-family:  'K2D', monserrat, DIN, barlow, sans-serif;
     color:#36A1D4;
     padding:7px !important;
+    width:150px;
     border:2px solid #36A1D4;
 margin:8px;
 margin-left:2px;
@@ -263,6 +264,7 @@ border-radius: 5px;
     font-family:  'K2D', monserrat, DIN, barlow, sans-serif;
     color:#36A1D4;
     padding:7px !important;
+    width:150px;
     border:2px solid #36A1D4;
     margin:8px;
     right:0;
@@ -299,9 +301,9 @@ div.inner {
     span.thisflyer:hover ~ img {
         display: block;
         position:absolute;
-        width:300px;
-        right:-110px;
-        bottom:-105px;
+        width: 500px;
+        left: -290px;
+        bottom: -20px;
         cursor:pointer;
     }
 
@@ -319,8 +321,8 @@ div.inner {
     font-size: 20pt;
     color: white;
     margin-top:80px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 7px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 5px;

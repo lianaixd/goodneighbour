@@ -1,15 +1,26 @@
-<svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="380" height="76" viewBox="0 0 380 76">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="385" height="83" viewBox="0 0 385 83">
   <defs>
-    <filter id="Good_Neighbour" x="74" y="17" width="306" height="59" filterUnits="userSpaceOnUse">
+    <filter id="logo" x="0" y="0" width="87.43" height="82.163" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    <filter id="Good_Neighbour" x="83" y="13" width="302" height="70" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
-  <path id="logo-2" data-name="logo" d="M61.212,64.163l-6.121-5.8H33.921a3.141,3.141,0,0,1-2.229-.919,3.107,3.107,0,0,1-.923-2.218V43.155H14.328l-6.121,5.8-.449-5.8H6.334a3.141,3.141,0,0,1-2.229-.919,3.107,3.107,0,0,1-.923-2.218V20.1H.785a.774.774,0,0,1-.734-.5.767.767,0,0,1,.2-.862l6.872-6.3V4.108h7.567V5.5L20.461.208a.791.791,0,0,1,1.069,0l20.21,18.535A.784.784,0,0,1,41.2,20.1H38.651v3.789l9.239-8.474a.791.791,0,0,1,1.068,0l5.771,5.293V19.319H62.3v8.332l6.872,6.3a.784.784,0,0,1-.534,1.361h-2.4V55.23a3.108,3.108,0,0,1-.923,2.218,3.141,3.141,0,0,1-2.229.919H61.662l-.449,5.8ZM49.731,38.655v5.018h5.045V38.655Zm-7.252,0v5.018h5.045V38.655Zm7.252-7.527v5.018h5.045V31.128H49.731Zm-7.252,0v5.018h5.045V31.128H42.48ZM22.144,23.287V28.3h5.045V23.287H22.144Zm-7.251,0V28.3h5.045V23.287H14.893Zm7.251-7.527v5.018h5.045V15.76Zm-7.251,0v5.018h5.045V15.76Z" transform="translate(0.005 0)" fill="#fff"/>
-  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Good_Neighbour)">
-    <text id="Good_Neighbour-2" data-name="Good Neighbour" transform="translate(83 55)" fill="#fff" font-size="40" font-family="Bahnschrift"><tspan x="0" y="0">Good Neighbour</tspan></text>
+  <g id="logo-2" data-name="logo" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#logo)">
+      <path id="logo-3" data-name="logo" d="M61.212,64.163l-6.121-5.8H33.921a3.141,3.141,0,0,1-2.229-.919,3.107,3.107,0,0,1-.923-2.218V43.155H14.328l-6.121,5.8-.449-5.8H6.334a3.141,3.141,0,0,1-2.229-.919,3.107,3.107,0,0,1-.923-2.218V20.1H.785a.774.774,0,0,1-.734-.5.767.767,0,0,1,.2-.862l6.872-6.3V4.108h7.567V5.5L20.461.208a.791.791,0,0,1,1.069,0l20.21,18.535A.784.784,0,0,1,41.2,20.1H38.651v3.789l9.239-8.474a.791.791,0,0,1,1.068,0l5.771,5.293V19.319H62.3v8.332l6.872,6.3a.784.784,0,0,1-.534,1.361h-2.4V55.23a3.108,3.108,0,0,1-.923,2.218,3.141,3.141,0,0,1-2.229.919H61.662l-.449,5.8ZM49.731,38.655v5.018h5.045V38.655Zm-7.252,0v5.018h5.045V38.655Zm7.252-7.527v5.018h5.045V31.128H49.731Zm-7.252,0v5.018h5.045V31.128H42.48ZM22.144,23.287V28.3h5.045V23.287H22.144Zm-7.251,0V28.3h5.045V23.287H14.893Zm7.251-7.527v5.018h5.045V15.76Zm-7.251,0v5.018h5.045V15.76Z" transform="translate(9.01 6)" fill="#fff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Good_Neighbour)">
+      <text id="Good_Neighbour-2" data-name="Good Neighbour" transform="translate(92 61)" fill="#fff" font-size="40" font-family="K2D-Regular, K2D"><tspan x="0" y="0">Good Neighbour</tspan></text>
+    </g>
   </g>
 </svg>

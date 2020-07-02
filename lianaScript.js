@@ -1,21 +1,4 @@
-/*
-let jqueryScript = document.createElement('script');
-jqueryScript.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
-document.head.appendChild(jqueryScript);
-*/
-//checkbox prompt//
-$(function () {
-    $('a.pulse-button').click(function (ev) {
 
-        $('input.check1').addClass('clicked');
-
-        setTimeout(function () {
-
-            $('input.check1').removeClass('clicked');
-        }, 300);
-        ev.preventDefault();
-    });
-});
 
 
 let script = document.createElement('script');

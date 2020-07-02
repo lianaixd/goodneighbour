@@ -8,7 +8,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
+    font-family: 'K2D', monserrat, DIN, barlow, sans-serif;
 }
 
 #right-panel {
@@ -28,7 +28,7 @@ html, body {
     ;
     padding: 7px;
     border-radius: 5px;
-    font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
+    font-family: 'K2D', monserrat, DIN, barlow, sans-serif;
     color: white;
     overflow-y: auto;
     max-height: 60px;
@@ -139,9 +139,6 @@ a {
     cursor: default;
 }
 
-section{
-    overflow: hidden;
-}
 
 #stretch{
     flex: 1 1 auto;
@@ -151,8 +148,8 @@ section{
 
 form {
     position:relative;
-    height:20em;
-    font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
+    height:27em;
+    font-family: 'K2D', monserrat, DIN, barlow, sans-serif;
     color:#36A1D4;
     font-size: 16pt;
     text-align:left;
@@ -174,12 +171,11 @@ form {
     margin-bottom:4px !important;
 }
 
-
 #name{
-
-    font-family:  bahnschrift, monserrat, DIN, barlow, sans-serif;
+    font-family:  'K2D', monserrat, DIN, barlow, sans-serif;
     color:#36A1D4;
     padding:7px !important;
+    width:150px;
     border:2px solid #36A1D4;
 margin:8px;
 margin-left:2px;
@@ -194,10 +190,10 @@ border-radius: 5px;
 }
 
 #number{
-
-    font-family:  bahnschrift, monserrat, DIN, barlow, sans-serif;
+    font-family:  'K2D', monserrat, DIN, barlow, sans-serif;
     color:#36A1D4;
     padding:7px !important;
+    width:150px;
     border:2px solid #36A1D4;
     margin:8px;
     right:0;
@@ -210,20 +206,44 @@ border-radius: 5px;
     outline:none;
 }
 ::placeholder{
-    font-family:  bahnschrift, monserrat, DIN, barlow, sans-serif;
+    font-family:  'K2D', monserrat, DIN, barlow, sans-serif;
     color:#36A1D4;
     font-size:12pt;
 }
 
+        img.small {
+        display: none;
+    }
+
+    span.thisflyer {
+        text-decoration: underline;
+    }
+
+    span.thisflyer:hover ~ img {
+        display: block;
+        position:absolute;
+        width: 500px;
+        left: -290px;
+        bottom: -20px;
+        cursor:pointer;
+    }
+
+
+    span.thisflyer:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+
 .pdf {
 
     background-color: #36A1D4;
-    font-family:  bahnschrift, monserrat, DIN, barlow, sans-serif;
+    font-family:  'K2D', monserrat, DIN, barlow, sans-serif;
     font-size: 20pt;
     color: white;
     margin-top:80px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 7px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 5px;
@@ -364,18 +384,17 @@ input.check2{
             }
              .users-info-position {
                 position: absolute;
-
                 z-index: 1000;
                 bottom: 25px;
-                left:218px;
-                font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
+                left:215px;
+                font-family: 'K2D', monserrat, DIN, barlow, sans-serif;
                 color:#36A1D4;
                 font-size: 10pt;
             }
            #phone-div{
-            bottom: 199px;
-            left:263px;
-            font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
+            bottom: 191px;
+            left:215px;
+            font-family: 'K2D', monserrat, DIN, barlow, sans-serif;
             color:#36A1D4;
             font-size: 10pt;
            }

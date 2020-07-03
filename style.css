@@ -345,8 +345,7 @@ input.check2{
 
 @media print
 {
-    #map-background {
-    }
+  
     #map {
         width: 594px;
         height: 565px;

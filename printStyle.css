@@ -66,10 +66,12 @@ html, body {
 }
 
     #map-background {
+        width: 600px;
+        height: 600px;
     }
     #map {
-        width: 594px;
-        height: 565px;
+        width: 600px;
+        height: 600px;
         top: 42%;
         left: 2%;
     }

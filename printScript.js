@@ -1,165 +1,10 @@
-/*
-let jqueryScript = document.createElement('script');
-jqueryScript.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
-document.head.appendChild(jqueryScript);
-*/
-//checkbox prompt//
-$(function () {
-    $('a.pulse-button').click(function (ev) {
-
-        $('input.check1').addClass('clicked');
-
-        setTimeout(function () {
-
-            $('input.check1').removeClass('clicked');
-        }, 300);
-        ev.preventDefault();
-    });
-});
-
-
 let script = document.createElement('script');
-
 script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYKkfx6SkANiwdCiUbJdbMg-EUaJ1ktoU&libraries=places&callback=initMap"
 script.defer = true;
 script.async = true;
 window.initMap = initMap;
 document.head.appendChild(script);
 
-const styleData = [
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text",
-        "stylers": [
-            {
-                "color": "#f84243"
-            },
-            {
-                "weight": "0.25"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#f84243"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.neighborhood",
-        "elementType": "labels.text",
-        "stylers": [
-            {
-                "hue": "#ff0000"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.land_parcel",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            },
-            {
-                "color": "#0d0000"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#f2f2f2"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#6bb3a5"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 45
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#3986b8"
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    }
-];
 let map;
 let Popup;
 let historicalOverlay;
@@ -172,16 +17,11 @@ let floatZoom = 14;
 let smallerBounds;
 
 function initMap() {
-    // Create the map.
-    // let homeCoords = {lat: 53.3498123, lng: -6.2624435};
     console.debug("initMap");
     Popup = createPopupClass();
     const centerCoords = {lat: 53.3498123, lng: -6.2624435};
     var styledMapType = new google.maps.StyledMapType(
         [
-            // {elementType: 'geometry', stylers: [{visibility: "simplified"}]},
-            // {elementType: 'labels.text.fill', stylers: [{color: '#f84243'}]},
-            // {elementType: 'labels.text.stroke', stylers: [{color: '#f84243'}]},
             {
                 featureType: 'administrative',
                 elementType: 'labels.text',
@@ -193,27 +33,6 @@ function initMap() {
                         lightness: 20
                     }]
             },
-
-            // {
-            //     featureType: 'administrative',
-            //     elementType: 'labels.text.fill',
-            //     stylers: [{color: '#f84243'}]
-            // },
-            // {
-            //     featureType: "administrative.neighborhood",
-            //     elementType: "labels.text",
-            //     stylers: [
-            //         {
-            //             color: '#f84243'
-            //         }
-            //         ,
-            //         {
-            //             weight: 0.25
-            //         },
-            //         {
-            //             lightness: 45
-            //         }]
-            // },
             {
                 featureType: "administrative.land_parcel",
                 elementType: "all",
@@ -322,7 +141,6 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: centerCoords,
         zoom: 14,
-        styles: styleData,
         disableDefaultUI: true,
         gestureHandling: 'none',
         zoomControl: false
@@ -390,16 +208,6 @@ function initMap() {
     function getPlaces(pos) {
         let service = new google.maps.places.PlacesService(map);
         console.debug("getPlaces");
-        /*let getNextPage = null;
-        let moreButton = document.getElementById('more');
-        moreButton.onclick = function () {
-            console.debug("Clicked more button");
-            moreButton.disabled = true;
-            if (getNextPage) {
-                getNextPage();
-            }
-        };*/
-
         service.nearbySearch(
             {
                 location: pos,
@@ -426,7 +234,31 @@ function initMap() {
                     return;
                 }
                 createMarkers(results);
+                map.addListener('tilesloaded', function() {
+                    console.debug("map tilesloaded")
+                    setTimeout(() => printPage(), 500);
+
+                });
             });
+    }
+
+    function printPage() {
+        let src = $('.print-image').css('background-image');
+        if (src === 'none') {
+            $(".print-image").css({"background-image": 'url(gnPDF.jpg)'});
+            src = $('.print-image').css('background-image');
+        }
+        console.debug("printPage, src= ", src)
+        const url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+        console.debug("printPage, url = ", url)
+        const img = new Image();
+        img.onload = function() {
+            window.print();
+        }
+        img.src = url;
+        if (img.complete) {
+            img.onload(event);
+        }
     }
 
     function createMarkers(places) {
@@ -465,43 +297,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
-/*
-function dynInput(cbox) {
-    if (cbox.checked) {
-        let nameInput = document.createElement("input");
-        nameInput.type = "text";
-        nameInput.placeholder = "Name";
-        nameInput.id = "name";
-        // nameInput.onkeyup ="manage(this)";
-        let nameDiv = document.createElement("div");
-        nameDiv.id = cbox.name;
-        // nameDiv.onkeyup = "manage(this)";
-        nameDiv.appendChild(nameInput);
-        document.getElementById("insertinputs").appendChild(nameDiv);
-        $(nameInput).change(function () {
-            usersName = $(nameInput).val();
-            console.debug("usersName: ", usersName);
-        })
-        let phoneInput = document.createElement("input");
-        phoneInput.type = "text";
-        phoneInput.placeholder = "Phone";
-        phoneInput.id = "number";
-        let phoneDiv = document.createElement("div");
-        phoneDiv.id = cbox.phone;
-        phoneDiv.appendChild(phoneInput);
-        $(phoneInput).change(function () {
-            usersPhone = $(phoneInput).val();
-            console.debug("usersPhone: ", usersPhone);
-        })
-        document.getElementById("insertinputs").appendChild(phoneDiv);
-    } else {
-        document.getElementById(cbox.name).remove();
-        document.getElementById(cbox.phone).remove();
-    }
-}
-*/
-
-//disable submit button
 (function () {
     $('.boxes > input').keyup(function () {
 
@@ -522,42 +317,11 @@ function dynInput(cbox) {
 
 
 $(document).ready(function () {
-    console.debug("document ready");
-    const phone = $('#number');
-    const name = $('#name');
-    const loading = $('.loading');
-    loading.attr("visibility", "visible");
-    $('#printButton').on("click", function () {
-        window.open("printPage.html", '_blank');
-    })
-
-    name.on('keypress', function () {
-        console.debug("NAME changed");
-        const phoneVal = phone.val();
-        const nameVal = name.val();
-        if (phoneVal && phoneVal !== '' && nameVal && nameVal !== '') {
-            console.debug("Both have values");
-            $('#printButton').attr('disabled', false);
-        }
-    });
-    phone.on('keypress', function () {
-        console.debug("PHONE changed");
-        const phoneVal = phone.val();
-        const nameVal = name.val();
-        if (phoneVal && phoneVal.length > 6 && nameVal && nameVal.length > 1) {
-            console.debug("Both have values");
-            $('#printButton').attr('disabled', false);
-        }
-    });
+    console.debug("Print document ready");
 });
 
 window.onafterprint = function(){
-    map.setZoom(14);
-    floatZoom = 14;
-    console.debug('Zoom after: ' + map.getZoom())
-    //smallerOverlay.setOpacity(0);
-    //historicalOverlay.setOpacity(1);
-    console.log("Printing completed...");
+    window.close();
 }
 
 function createPopupClass() {

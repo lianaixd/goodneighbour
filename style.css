@@ -8,7 +8,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'K2D', monserrat, DIN, barlow, sans-serif;
+    font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
 }
 
 #right-panel {
@@ -25,10 +25,10 @@ html, body {
     color: white;
     border:  2px solid #36A1D4;
     background:  #36A1D4;
-    ;
+;
     padding: 7px;
     border-radius: 5px;
-    font-family: 'K2D', monserrat, DIN, barlow, sans-serif;
+    font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
     color: white;
     overflow-y: auto;
     max-height: 60px;
@@ -89,12 +89,12 @@ html, body {
 }
 
 .page {
-   display:flex;
-   flex-flow:row wrap;
-   /* flex-direction:row; */
-   justify-content:space-evenly;
-   margin-top:4em;
-   cursor: default;
+    display:flex;
+    flex-flow:row wrap;
+    /* flex-direction:row; */
+    justify-content:space-evenly;
+    margin-top:4em;
+    cursor: default;
 }
 
 #fill{
@@ -102,7 +102,7 @@ html, body {
     width:185px;
 
 
-  /*  margin-left:160px;*/
+    /*  margin-left:160px;*/
 }
 /* start pulse test */
 a {
@@ -114,7 +114,6 @@ a {
   .clicked {
     animation: boxShadowAnim 0.5s forwards;
   }
-
   @keyframes boxShadowAnim {
     from {
       box-shadow: #ffe0b2 0px 0px 0px 0px;
@@ -127,18 +126,21 @@ a {
 /* end pulse test */
 #print{
     width:160px;
- /*   margin-left:158px;*/
+    /*   margin-left:158px;*/
 }
 
 #deliver{
     width:183px;
-  /*  margin-left:163px;*/
+    /*  margin-left:163px;*/
 }
 
 .gm-style{
     cursor: default;
 }
 
+section{
+    overflow: hidden;
+}
 
 #stretch{
     flex: 1 1 auto;
@@ -148,8 +150,8 @@ a {
 
 form {
     position:relative;
-    height:27em;
-    font-family: 'K2D', monserrat, DIN, barlow, sans-serif;
+    height:20em;
+    font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
     color:#36A1D4;
     font-size: 16pt;
     text-align:left;
@@ -162,26 +164,27 @@ form {
 }
 
 .boxes{
-   display:inline-flex;
-   height:40px;
-   align-items: center;
+    display:inline-flex;
+    height:40px;
+    align-items: center;
 }
 
 .border{
     margin-bottom:4px !important;
 }
 
+
 #name{
-    font-family:  'K2D', monserrat, DIN, barlow, sans-serif;
+
+    font-family:  bahnschrift, monserrat, DIN, barlow, sans-serif;
     color:#36A1D4;
     padding:7px !important;
-    width:150px;
     border:2px solid #36A1D4;
-margin:8px;
-margin-left:2px;
-right:0;
-top:25%;
-border-radius: 5px;
+    margin:8px;
+    margin-left:2px;
+    right:0;
+    top:25%;
+    border-radius: 5px;
 }
 
 #name:focus{
@@ -190,15 +193,15 @@ border-radius: 5px;
 }
 
 #number{
-    font-family:  'K2D', monserrat, DIN, barlow, sans-serif;
+
+    font-family:  bahnschrift, monserrat, DIN, barlow, sans-serif;
     color:#36A1D4;
     padding:7px !important;
-    width:150px;
     border:2px solid #36A1D4;
     margin:8px;
     right:0;
-top:35%;
-border-radius: 5px;
+    top:35%;
+    border-radius: 5px;
 }
 
 #number:focus{
@@ -206,44 +209,20 @@ border-radius: 5px;
     outline:none;
 }
 ::placeholder{
-    font-family:  'K2D', monserrat, DIN, barlow, sans-serif;
+    font-family:  bahnschrift, monserrat, DIN, barlow, sans-serif;
     color:#36A1D4;
     font-size:12pt;
 }
 
-        img.small {
-        display: none;
-    }
-
-    span.thisflyer {
-        text-decoration: underline;
-    }
-
-    span.thisflyer:hover ~ img {
-        display: block;
-        position:absolute;
-        width: 500px;
-        left: -290px;
-        bottom: -20px;
-        cursor:pointer;
-    }
-
-
-    span.thisflyer:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
-
-
 .pdf {
 
     background-color: #36A1D4;
-    font-family:  'K2D', monserrat, DIN, barlow, sans-serif;
+    font-family:  bahnschrift, monserrat, DIN, barlow, sans-serif;
     font-size: 20pt;
     color: white;
     margin-top:80px;
-    padding-top: 5px;
-    padding-bottom: 7px;
+    padding-top: 10px;
+    padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 5px;
@@ -258,8 +237,8 @@ input:disabled {
 
 
 .pdf:hover{
-     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 12px 16px 0 rgba(0,0,0,0.19);
-     outline:none;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 12px 16px 0 rgba(0,0,0,0.19);
+    outline:none;
 }
 .pdf:focus{
     outline:none;
@@ -273,9 +252,9 @@ input:disabled {
     left:-20px;*/
     display: none;
 }
- /* .print{
-    position: inherit;
-    left:100px;
+/* .print{
+   position: inherit;
+   left:100px;
 } */
 
 
@@ -305,16 +284,16 @@ input.check2{
 }
 
 .clicked {
-	animation: boxShadowAnim 0.5s forwards;
+    animation: boxShadowAnim 0.5s forwards;
 }
 
 @keyframes boxShadowAnim {
-	from {
-		box-shadow: rgba(54, 161, 212, 1) 0px 0px 0px 0px;
-	}
-	to {
-		box-shadow: rgba(54, 161, 212, 0) 0px 0px 0px 20px;
-	}
+    from {
+        box-shadow: rgba(54, 161, 212, 1) 0px 0px 0px 0px;
+    }
+    to {
+        box-shadow: rgba(54, 161, 212, 0) 0px 0px 0px 20px;
+    }
 }
 .print-hidden {
     display: none;
@@ -343,66 +322,67 @@ input.check2{
 }
 
 
- @media print
-        {
-     #map-background {
-     }
-     #map {
-         width: 594px;
-         height: 565px;
-         top: 42%;
-         left: 2%;
-     }
-     .print-image {
-         background-image: url("gnPDF.jpg");
-         -webkit-print-color-adjust: exact;
-         height: 925px; /* You must set a specified height */
-         background-size: cover; /* Resize the background image to cover the entire container */
-         top: 0;
-         left: 0;
-     }
-            @page {
-                margin: 0;
-            }
-            body { margin: 0; }
+@media print
+{
+    #map-background {
+    }
+    #map {
+        width: 594px;
+        height: 565px;
+        top: 42%;
+        left: 2%;
+    }
+    .print-image {
+        background-image: url("gnPDF.jpg");
+        -webkit-print-color-adjust: exact;
+        height: 925px; /* You must set a specified height */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        top: 0;
+        left: 0;
+    }
+    @page {
+        margin: 0;
+    }
+    body { margin: 0; }
 
-            .page {
-                margin: 0;
-                height: 100%;
-            }
-            .no-print, .no-print *
-            {
-                display: none !important;
-            }
-            .print, .print *
-            {
-                display: block !important;
-            }
-            section {
-                margin: 0 !important;
-                padding: 0 !important;
-            }
-             .users-info-position {
-                position: absolute;
-                z-index: 1000;
-                bottom: 25px;
-                left:215px;
-                font-family: 'K2D', monserrat, DIN, barlow, sans-serif;
-                color:#36A1D4;
-                font-size: 10pt;
-            }
-           #phone-div{
-            bottom: 191px;
-            left:215px;
-            font-family: 'K2D', monserrat, DIN, barlow, sans-serif;
-            color:#36A1D4;
-            font-size: 10pt;
-           }
-     #name-div{
-         bottom: 49px;
-         left:192px;
-         font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
-         color:#36A1D4;
-         font-size: 10pt;
-     }
-        }
+    .page {
+        margin: 0;
+        height: 100%;
+    }
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+    .print, .print *
+    {
+        display: block !important;
+    }
+    section {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .users-info-position {
+        position: absolute;
+
+        z-index: 1000;
+        bottom: 25px;
+        left:218px;
+        font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
+        color:#36A1D4;
+        font-size: 10pt;
+    }
+    #phone-div{
+        bottom: 199px;
+        left:263px;
+        font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
+        color:#36A1D4;
+        font-size: 10pt;
+    }
+    #name-div{
+        bottom: 49px;
+        left:192px;
+        font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
+        color:#36A1D4;
+        font-size: 10pt;
+    }
+}

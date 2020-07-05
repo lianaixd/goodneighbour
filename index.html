@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <title>Good Neighbour</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="./lianaScript.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="no-print">
-    <div class="logo">
-        <img id="logo" src="logo.svg" alt="Good Neighbour logo"/>
-    </div>
-</header>
-<div class="page print-image">
-    <div id="map-background">
-        <div class="users-info-position" id="name-div">
-        </div>
-        <div class="users-info-position" id="phone-div">
-        </div>
-        <div id="map"></div>
-        <div id="content"></div>
-    </div>
-    <section class="no-print" id="stretch">
-        <form>
-            <p>Good Neighbour helps people connect with their neighbours in a low-risk and unobtrusive way.</p>
-            <p class="border">If you would like to offer assistance to people who are cocooning, include your</p>
-            <div class="boxes">
-                <input type="text" name="name" id="name" placeholder="Name" required />
-                <p>&</p>
-                <input type="tel" name="number" id="number" placeholder="Phone Number" required/>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <title>Good Neighbour</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="./lianaScript.js"></script>
+        <link rel="stylesheet" href="style.css">
+       
+    </head>
+    <body>
+        <header class="no-print">
+            <div class="logo">
+                <img id="logo" src="logo.png" alt="Good Neighbour logo"/>
             </div>
-            <p>Then print and deliver this flyer to your neighbours.</p>
-            <input type="button" class="pdf" id="printButton" disabled="disabled" value="Print Flyer"/>
-        </form>
-    </section >
-    <!-- <section  class="no-print">
-         <div id="right-panel">
-             <h2>Results</h2>
-             <ul id="places"></ul>
-             <button id="more">More results</button>
-         </div>
-     </section>-->
-</div>
-</body>
+        </header>
+        <div class="page print-image">
+            <div id="map-background">
+                <div class="users-info-position" id="name-div">
+                </div>
+                <div class="users-info-position" id="phone-div">
+                </div>
+                <div id="map"></div>
+                <div id="content"></div>
+            </div>
+            <section class="no-print" id="stretch">
+                <form>
+                    <p>Good Neighbour helps people connect with their neighbours in a low-risk and unobtrusive way.</p>
+                    <p class="border">If you would like to offer assistance to people who are cocooning, include your</p>
+                    <div class="boxes">
+                        <input type="text" name="name" id="name" placeholder="Name" required />
+                        <p>&</p>
+                        <input type="tel" name="number" id="number" placeholder="Phone Number" required/>
+                    </div>
+                    <div class="outer">
+                        <div class="inner">
+                            <p>Then print and deliver <span class="thisflyer">this flyer</span> to your neighbours.
+                                <img class="small" src="gnPDFsmall.jpg"/>
+                                 </p>
+                                 </div>
+                                 </div>
+                    <input type="button" class="pdf" id="printButton" disabled="disabled" value="Print Flyer"/>
+                </form>
+            </section >
+            <!-- <section  class="no-print">
+                <div id="right-panel">
+                    <h2>Results</h2>
+                    <ul id="places"></ul>
+                    <button id="more">More results</button>
+                </div>
+            </section>-->
+        </div>
+    </body>
 </html>

@@ -66,18 +66,33 @@ html, body {
 }
 
     #map-background {
+        height: 100%;
     }
     #map {
-        width: 594px;
-        height: 565px;
-        top: 42%;
-        left: 2%;
+        width: 609px;
+        height: 590px;
+        left: 10%;
+        top: 22%;
+    }
+    .whiteout-container {
+        width: 610px;
+        height: 30px;
+        left: 10%;
+        top: 75%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        z-index: 9999;
+    }
+    .whiteout-box {
+        width: 90px;
+        background: white;
     }
     .print-image {
         background-image: url("gnPDF.jpg");
         -webkit-print-color-adjust: exact;
         height: 925px; /* You must set a specified height */
-        background-size: contain; /* Resize the background image to cover the entire container */
+        background-size: cover; /* Resize the background image to cover the entire container */
         top: 0;
         left: 0;
     }

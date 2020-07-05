@@ -253,12 +253,36 @@ function initMap() {
         console.debug("printPage, url = ", url)
         const img = new Image();
         img.onload = function() {
-            window.print();
+            const urlVars = getUrlVars();
+            const name = urlVars.name;
+            const nameFormatted = name.replace(/%20/g, " ");
+            const phone = urlVars.phone;
+            const phoneFormatted = phone.replace(/%20/g, " ");
+            const nameDiv = $('#name-div');
+            const phoneDiv = $('#phone-div');
+            nameDiv.html("<p>" + nameFormatted + "</p>");
+            phoneDiv.html("<p>" + phoneFormatted + "</p>");
+            console.debug("urlVars: ", urlVars);
+            // window.print();
         }
         img.src = url;
         if (img.complete) {
             img.onload(event);
         }
+    }
+
+    // Read a page's GET URL variables and return them as an associative array.
+    function getUrlVars()
+    {
+        let vars = [], hash;
+        let hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(let i = 0; i < hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
     }
 
     function createMarkers(places) {
@@ -321,7 +345,7 @@ $(document).ready(function () {
 });
 
 window.onafterprint = function(){
-    window.close();
+   // window.close();
 }
 
 function createPopupClass() {

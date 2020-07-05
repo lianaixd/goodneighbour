@@ -528,7 +528,7 @@ $(document).ready(function () {
     const loading = $('.loading');
     loading.attr("visibility", "visible");
     $('#printButton').on("click", function () {
-        window.open("printPage.html", '_blank');
+        window.open("printPage.html?name=" + name.val() + "&phone=" + phone.val(), '_blank');
     })
 
     name.on('keypress', function () {

@@ -263,7 +263,7 @@ function initMap() {
             nameDiv.html("<p>" + nameFormatted + "</p>");
             phoneDiv.html("<p>" + phoneFormatted + "</p>");
             console.debug("urlVars: ", urlVars);
-            // window.print();
+            window.print();
         }
         img.src = url;
         if (img.complete) {
@@ -345,7 +345,7 @@ $(document).ready(function () {
 });
 
 window.onafterprint = function(){
-   // window.close();
+   window.close();
 }
 
 function createPopupClass() {

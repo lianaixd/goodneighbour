@@ -454,6 +454,7 @@ function initMap() {
             li.textContent = place.name;
             // placesElement.appendChild(li);
         }
+        $.LoadingOverlay("hide");
     }
 }
 
@@ -523,6 +524,7 @@ function dynInput(cbox) {
 
 $(document).ready(function () {
     console.debug("document ready");
+    $.LoadingOverlay("show");
     const phone = $('#number');
     const name = $('#name');
     const loading = $('.loading');

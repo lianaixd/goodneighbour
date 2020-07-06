@@ -253,7 +253,8 @@ span.thisflyer:hover {
 }
 
 input:disabled {
-    background-color: #888;
+    background-color: rgba(54, 162, 212, 0.274);
+    pointer-events:none;
 }
 
 

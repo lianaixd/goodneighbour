@@ -113,21 +113,21 @@ html, body {
     .users-info-position {
         position: absolute;
         z-index: 1000;
-        bottom: 10px;
+        bottom: 25px;
         left:218px;
         font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
         color:#36A1D4;
         font-size: 10pt;
     }
     #phone-div{
-        bottom: 199px;
+        bottom: 196px;
         left:263px;
         font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
         color:#36A1D4;
         font-size: 10pt;
     }
     #name-div{
-        bottom: 49px;
+        bottom: 45px;
         left:192px;
         font-family: bahnschrift, monserrat, DIN, barlow, sans-serif;
         color:#36A1D4;

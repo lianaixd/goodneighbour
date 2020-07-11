@@ -92,7 +92,7 @@ html, body {
     display:flex;
     flex-flow:row wrap;
     /* flex-direction:row; */
-    justify-content:space-evenly;
+    justify-content:center;
     margin-top:4em;
     cursor: default;
 }

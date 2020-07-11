@@ -510,7 +510,7 @@ $(document).ready(function () {
         console.debug("PHONE changed");
         const phoneVal = phone.val();
         const nameVal = name.val();
-        if (phoneVal && phoneVal.length > 5 && nameVal && nameVal.length > 1) {
+        if (phoneVal && phoneVal.length > 4 && nameVal && nameVal.length > 1) {
             console.debug("Both have values");
             $('#printButton').attr('disabled', false);
         }

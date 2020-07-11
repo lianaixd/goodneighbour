@@ -466,42 +466,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
-/*
-function dynInput(cbox) {
-    if (cbox.checked) {
-        let nameInput = document.createElement("input");
-        nameInput.type = "text";
-        nameInput.placeholder = "Name";
-        nameInput.id = "name";
-        // nameInput.onkeyup ="manage(this)";
-        let nameDiv = document.createElement("div");
-        nameDiv.id = cbox.name;
-        // nameDiv.onkeyup = "manage(this)";
-        nameDiv.appendChild(nameInput);
-        document.getElementById("insertinputs").appendChild(nameDiv);
-        $(nameInput).change(function () {
-            usersName = $(nameInput).val();
-            console.debug("usersName: ", usersName);
-        })
-        let phoneInput = document.createElement("input");
-        phoneInput.type = "text";
-        phoneInput.placeholder = "Phone";
-        phoneInput.id = "number";
-        let phoneDiv = document.createElement("div");
-        phoneDiv.id = cbox.phone;
-        phoneDiv.appendChild(phoneInput);
-        $(phoneInput).change(function () {
-            usersPhone = $(phoneInput).val();
-            console.debug("usersPhone: ", usersPhone);
-        })
-        document.getElementById("insertinputs").appendChild(phoneDiv);
-    } else {
-        document.getElementById(cbox.name).remove();
-        document.getElementById(cbox.phone).remove();
-    }
-}
-*/
-
 //disable submit button
 (function () {
     $('.boxes > input').keyup(function () {
@@ -546,7 +510,7 @@ $(document).ready(function () {
         console.debug("PHONE changed");
         const phoneVal = phone.val();
         const nameVal = name.val();
-        if (phoneVal && phoneVal.length > 6 && nameVal && nameVal.length > 1) {
+        if (phoneVal && phoneVal.length > 5 && nameVal && nameVal.length > 1) {
             console.debug("Both have values");
             $('#printButton').attr('disabled', false);
         }

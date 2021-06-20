@@ -1,0 +1,7 @@
+ name: learn-github-actions
+on: [push]
+jobs:
+  build: 
+    steps:
+       env:
+        GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}

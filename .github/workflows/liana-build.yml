@@ -1,10 +1,10 @@
 name: learn-github-actions
 on: push
 jobs: 
-  build: 
+  Explore-Github-Actions: 
     runs-on: ubuntu-latest
     steps:
-      - name: Build
+      - name: Add env variables to liana proj
         run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}

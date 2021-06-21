@@ -19,8 +19,8 @@ $(function () {
 
 
 let script = document.createElement('script');
-const apiKey = process.env.GOOGLE_MAPS_API_KEY;
-script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&callback=initMap`
+
+script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAljbJGLXhA_rKOXkL7OKrFwjjgKO0dVyk&libraries=places&callback=initMap"
 script.defer = true;
 script.async = true;
 window.initMap = initMap;
